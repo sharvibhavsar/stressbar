@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stress Test | Stress Bar</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/stressCalc.js" defer></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">Stress Bar</div>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="levels.html">Stress Levels</a>
+    <a href="tips.html">Tips</a>
+    <a href="test.html">Test</a>
+    <a href="result.html">Results</a>
+  </nav>
+</header>
+
+<section class="content">
+
+<h1>Stress Assessment Questionnaire</h1>
+
+<form id="stressForm" action="php/saveResult.php" method="POST">
+
+<div class="card">
+<h3>Personal Information</h3>
+
+<label>Name</label>
+<input type="text" name="name" maxlength="75" required>
+
+<label>Age</label>
+<input type="number" name="age" max="99" required>
+
+<label>Gender</label>
+<input type="radio" name="gender" value="Male" required> Male
+<input type="radio" name="gender" value="Female"> Female
+<input type="radio" name="gender" value="Others"> Others
+
+<label>Email</label>
+<input type="email" name="email" required>
+
+<label>Life Stage</label>
+<select name="life_stage" required>
+  <option value="">Select</option>
+  <option>School</option>
+  <option>College</option>
+  <option>Working</option>
+  <option>Retired</option>
+</select>
+</div>
+
+<div class="card">
+<h3>Work and Lifestyle</h3>
+
+<p>Hours of work/study per day</p>
+<input type="radio" name="q1" value="0" required> Less than 4
+<input type="radio" name="q1" value="1"> 4–6
+<input type="radio" name="q1" value="2"> 7–9
+<input type="radio" name="q1" value="3"> More than 9
+
+<p>Sleep quality</p>
+<input type="radio" name="q2" value="0" required> Very good
+<input type="radio" name="q2" value="1"> Good
+<input type="radio" name="q2" value="2"> Poor
+<input type="radio" name="q2" value="3"> Very poor
+</div>
+
+<div class="card">
+<h3>Emotional State</h3>
+
+<p>Mood stability</p>
+<input type="radio" name="q3" value="0" required> Very stable
+<input type="radio" name="q3" value="1"> Mostly stable
+<input type="radio" name="q3" value="2"> Often unstable
+<input type="radio" name="q3" value="3"> Very unstable
+
+<p>How often do you feel angry</p>
+<input type="radio" name="q4" value="0" required> Rarely
+<input type="radio" name="q4" value="1"> Sometimes
+<input type="radio" name="q4" value="2"> Often
+<input type="radio" name="q4" value="3"> Very often
+
+<p>Feeling overwhelmed</p>
+<input type="radio" name="q5" value="0" required> Never
+<input type="radio" name="q5" value="1"> Sometimes
+<input type="radio" name="q5" value="2"> Often
+<input type="radio" name="q5" value="3"> Always
+
+<p>Physical tiredness</p>
+<input type="radio" name="q6" value="0" required> Rare
+<input type="radio" name="q6" value="1"> Sometimes
+<input type="radio" name="q6" value="2"> Often
+<input type="radio" name="q6" value="3"> Constant
+</div>
+
+<div class="card">
+<h3>Stress Factors</h3>
+
+<input type="checkbox" name="stress_sources[]" value="Studies"> Studies/Work
+<input type="checkbox" name="stress_sources[]" value="Family"> Family
+<input type="checkbox" name="stress_sources[]" value="Money"> Money
+<input type="checkbox" name="stress_sources[]" value="Health"> Health
+<input type="checkbox" name="stress_sources[]" value="Relationships"> Relationships
+<input type="checkbox" name="stress_sources[]" value="Screen"> Screen time
+</div>
+
+<div class="card">
+<h3>Coping Methods</h3>
+
+<input type="checkbox" name="coping[]" value="Music"> Music
+<input type="checkbox" name="coping[]" value="Exercise"> Exercise
+<input type="checkbox" name="coping[]" value="Friends"> Friends
+<input type="checkbox" name="coping[]" value="Meditation"> Meditation
+<input type="checkbox" name="coping[]" value="Gaming"> Gaming
+<input type="checkbox" name="coping[]" value="Sleep"> Sleeping
+</div>
+
+<div class="card">
+<h3>Additional Feedback</h3>
+<textarea name="feedback" rows="4"></textarea>
+</div>
+
+<button type="submit">Submit Assessment</button>
+<button type="reset">Reset</button>
+
+</form>
+
+</section>
+
+<footer class="footer">
+  <p>Stress Bar — Wellness Assessment</p>
+  
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stress Result | Stress Bar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">Stress Bar</div>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="levels.html">Stress Levels</a>
+    <a href="tips.html">Tips</a>
+    <a href="test.html">Test</a>
+    <a href="result.html">Results</a>
+  </nav>
+</header>
+
+<section class="content">
+  <h1>Your Stress Result</h1>
+
+  <div id="resultBox" class="result-card">
+    <h2 id="levelText"></h2>
+    <p>Your Stress Score: <span id="scoreText"></span></p>
+    <p id="adviceText"></p>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Stress Bar — Student Wellness Assessment</p>
+  <p>Educational Project</p>
+</footer>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const score = params.get("score");
+  const level = params.get("level");
+
+  if (score && level) {
+    document.getElementById("scoreText").textContent = score;
+    document.getElementById("levelText").textContent = level + " Stress";
+
+    let advice = "";
+    let color = "";
+
+    if (level === "Low") {
+      advice = "Your responses indicate healthy stress levels and balanced coping patterns.";
+      color = "#FCF6B1";
+    } else if (level === "Medium") {
+      advice = "Your stress level is moderate. Improving routine balance and rest may help.";
+      color = "#C5E7E2";
+    } else {
+      advice = "Your responses suggest elevated stress. Consider recovery and support strategies.";
+      color = "#710627";
+    }
+
+    document.getElementById("adviceText").textContent = advice;
+    document.getElementById("resultBox").style.background = color;
+  }
+</script>
+
+</body>
+</html>
