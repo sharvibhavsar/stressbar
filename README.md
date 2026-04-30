@@ -52,8 +52,8 @@ StressBar was created as a small digital space where someone can slow down for a
 ## Author
 
 Sharvi Bhavsar  
-Computer Science Engineering  
-SAL Institute of Technology  
+Computer Engineering  
+SAL Institute of Technology & Engineering Research  
 
 ---
 
